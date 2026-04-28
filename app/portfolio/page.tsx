@@ -3,7 +3,7 @@ import Image from "next/image";
 import { 
   ArrowRight,
 } from "lucide-react";
-import { QuoteModalWrapper } from "@/components/QuoteModalWrapper";
+import { QuoteModalWrapper } from "../../components/QuoteModalWrapper";
 import { getProjects } from "@/app/actions/projects";
 
 export default async function PortfolioPage() {

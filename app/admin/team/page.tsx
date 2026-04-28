@@ -8,10 +8,10 @@ import {
   Plus, 
   Trash2, 
   Edit, 
-  Linkedin,
   Users as UsersIcon,
   UserCheck
 } from 'lucide-react'
+import { LinkedinSVG as Linkedin } from '@/components/Icons'
 
 export default function AdminTeamPage() {
   const [members, setMembers] = useState<any[]>([])

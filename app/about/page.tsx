@@ -4,9 +4,9 @@ import {
   Target, 
   History, 
   Award, 
-  Linkedin,
 } from "lucide-react";
-import { QuoteModalWrapper } from "@/components/QuoteModalWrapper";
+import { LinkedinSVG as Linkedin } from "@/components/Icons";
+import { QuoteModalWrapper } from "../../components/QuoteModalWrapper";
 import { getTeamMembers } from "@/app/actions/team";
 
 export default async function AboutPage() {

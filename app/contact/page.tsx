@@ -8,10 +8,8 @@ import {
   Clock, 
   ArrowRight,
   MessageCircle,
-  Linkedin,
-  Twitter,
-  Instagram,
-  ChevronRight
+  ChevronRight,
+  CheckCircle2
 } from "lucide-react";
 import { LinkedinSVG, TwitterSVG, InstagramSVG } from "@/components/Icons";
 import { submitLead } from "@/app/actions/leads";

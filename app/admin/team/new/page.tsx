@@ -11,9 +11,9 @@ import {
   User, 
   Briefcase, 
   FileText,
-  Linkedin,
   AlertCircle
 } from 'lucide-react'
+import { LinkedinSVG as Linkedin } from '@/components/Icons'
 
 export default function NewTeamMemberPage() {
   const router = useRouter()

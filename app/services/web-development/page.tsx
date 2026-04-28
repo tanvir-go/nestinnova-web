@@ -61,7 +61,7 @@ export default function WebDevelopmentPage() {
             ].map((item, idx) => (
               <div key={idx} className="p-8 rounded-3xl border border-slate-100 bg-white hover:shadow-xl transition-all group">
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  {React.cloneElement(item.icon as React.ReactElement, { className: "w-6 h-6" })}
+                  {React.cloneElement(item.icon as React.ReactElement<any>, { className: "w-6 h-6" })}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{item.desc}</p>
