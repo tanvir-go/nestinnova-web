@@ -1,4 +1,4 @@
-import { type NextRequest } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server'
 import { updateSession } from '@/utils/supabase/middleware'
 
 export async function middleware(request: NextRequest) {
@@ -14,14 +14,14 @@ export async function middleware(request: NextRequest) {
   if (isLoginPage && adminSession?.value === 'true') {
     const url = request.nextUrl.clone()
     url.pathname = '/admin/dashboard'
-    return Response.redirect(url)
+    return NextResponse.redirect(url)
   }
 
   // Redirect to login if trying to access admin pages without session
   if (isAdminPage && adminSession?.value !== 'true') {
     const url = request.nextUrl.clone()
     url.pathname = '/login'
-    return Response.redirect(url)
+    return NextResponse.redirect(url)
   }
 
   return response
