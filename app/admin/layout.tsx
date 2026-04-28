@@ -1,6 +1,8 @@
 import Sidebar from '@/components/admin/Sidebar'
 import { Bell, Search, User } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 export default function AdminLayout({
   children,
 }: {

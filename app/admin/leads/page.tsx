@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { createClient } from '@/utils/supabase/client'
-const supabase = createClient()
 import { 
   Search, 
   Filter, 
@@ -17,6 +16,7 @@ import {
 } from 'lucide-react'
 
 export default function LeadsPage() {
+  const [supabase] = useState(() => createClient())
   const [leads, setLeads] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -38,7 +38,7 @@ export default function LeadsPage() {
     // Real-time subscription
     const channel = supabase
       .channel('public:leads')
-      .on('postgres_changes', { event: '*', table: 'leads', schema: 'public' }, (payload) => {
+      .on('postgres_changes', { event: '*', table: 'leads', schema: 'public' }, (payload: any) => {
         if (payload.eventType === 'INSERT') {
           setLeads((prev) => [payload.new, ...prev])
         }
